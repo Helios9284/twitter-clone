@@ -1,18 +1,20 @@
 import { Dot, LucideIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
  import React from "react";
  
  interface Props {
    label: string;
    icon: LucideIcon;
    notification?: boolean;
+   disable?:boolean;
  }
- const SidebarItem = ({ label, icon: Icon, notification }: Props) => {
+ const SidebarItem = ({ label, icon: Icon, notification, disable  }: Props) => {
    return (
      <div className="flex flex-row items-center ">
        <div className="relative w-12 h-12 rounded-full flex mt-2  items-center justify-center hover:bg-gray-500 hover:bg-opacity-10 lg:hidden">
          <Icon size={26} />
        </div>
-       <div className="relative hidden lg:flex gap-4 py-3 px-4 rounded-full hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer items-center">
+       <div className={cn(`relative hidden lg:flex gap-4 py-3 px-4 rounded-full hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer items-center`, disable ? 'cursor-not-allowed' : '')}>
          <Icon size={26} />
          <p className="hidden lg:block text-lg font-medium">{label}</p>
          {notification ? (
