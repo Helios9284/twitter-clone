@@ -1,12 +1,13 @@
 import useLoginModal from "@/hooks/useLoginModal";
- import Modal from "../ui/modal";
- import { loginSchema } from "@/lib/validation";
- import { useForm } from "react-hook-form";
- import { zodResolver } from "@hookform/resolvers/zod";
- import { z } from "zod";
- 
- import { Button } from "@/components/ui/button";
- import {
+//  import Modal from "@/ui/modal";
+import Modal from "@/components/ui/modal";
+import { loginSchema } from "@/lib/validation";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
+import { Button } from "@/components/ui/button";
+import {
    Form,
    FormControl,
    FormDescription,
@@ -15,15 +16,15 @@ import useLoginModal from "@/hooks/useLoginModal";
    FormLabel,
    FormMessage,
  } from "@/components/ui/form";
- import { Input } from "@/components/ui/input";
- import { useCallback, useState } from "react";
- 
- 
- import { AlertCircle } from "lucide-react";
- import { Alert, AlertTitle, AlertDescription } from "../ui/alert";
- import axios from "axios";
- import { signIn } from "next-auth/react";
- import useRegisterModal from "@/hooks/useRegisterModal";
+import { Input } from "@/components/ui/input";
+import { useCallback, useState } from "react";
+
+
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertTitle, AlertDescription } from "../ui/alert";
+import axios from "axios";
+import { signIn } from "next-auth/react";
+import useRegisterModal from "@/hooks/useRegisterModal";
  
  const LoginModal = () => {
    const loginModal = useLoginModal();
@@ -95,7 +96,7 @@ import useLoginModal from "@/hooks/useLoginModal";
              render={({ field }) => (
                <FormItem>
                  <FormControl>
-                   <Input placeholder="Password" {...field} />
+                   <Input placeholder="Password"  type="password" {...field} />
                  </FormControl>
  
                  <FormMessage />

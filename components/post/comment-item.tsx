@@ -25,7 +25,7 @@ import React, { useCallback } from "react";
    }, []);
  
    return (
-     <div className="border-b-[1px] border-neutral-800 p-5 cursor-pointer hover:bg-neutral-900 transition relative">
+     <div className="border-b-[1px]  p-5 cursor-pointer  transition relative">
        <div className="flex flex-row gap-3 cursor-pointer">
          <Avatar onClick={goToProfile}>
            <AvatarImage src={item?.user?.profileImage}  />
@@ -34,16 +34,22 @@ import React, { useCallback } from "react";
  
          <div>
            <div className="flex flex-row items-center gap-2" onClick={() => {}}>
-             <p className="text-white font-semibold cursor-pointer hover:underline">
-               {item?.user?.name}
-             </p>
-             <span className="text-neutral-500 cursor-pointer hover:underline hidden md:block">
-               @{item?.user?.username}
-             </span>
-             <span className="text-neutral-500 text-sm">{createdAt} ago</span>
+            <div className="line-clamp-1">
+                <span className="font-semibold cursor-pointer hover:underline">
+                  {item?.user?.name}
+                </span>
+              </div>
+              <div className="line-clamp-1">
+                <span className="text-neutral-500 text-sm cursor-pointer hover:underline hidden md:block">
+                  @{item?.user?.username}
+                </span>
+              </div>
+              <div className="line-clamp-1">
+                <span className="text-neutral-500 text-sm">{createdAt} ago</span>
+              </div>
            </div>
  
-           <div className="text-white mt-1">{item.body}</div>
+           <span className="mt-1 text-sm">{item.body}</span>
          </div>
        </div>
      </div>

@@ -29,7 +29,6 @@
  
    const router = useRouter();
    const { hasLiked, toggleLike } = useLike({ post, postId: post?._id, userId });
-   const LikeIcon = hasLiked ? AiFillHeart : AiOutlineHeart;
  
    const goToPost = (e: any) => {
      e.stopPropagation();
@@ -93,17 +92,25 @@
            <div className="w-full">
              <div className="flex w-full justify-between" onClick={goToProfile}>
                <div className="flex flex-row items-center gap-2">
-                 <p className=" font-semibold cursor-pointer hover:underline">
-                   {post?.user?.name}
-                 </p>
-                 <span className=" cursor-pointer hidden md:block text-sm dark:text-zinc-400">
-                   @{post?.user?.username}
-                 </span>
-                 <span className=" text-sm dark:text-zinc-500">{createdAt} ago</span>
-               </div>
+                  <div className="line-clamp-1">
+                      <span className="font-semibold cursor-pointer hover:underline">
+                        {post?.user?.name}
+                      </span>
+                  </div>
+                  <div className="line-clamp-1">
+                    <span className=" cursor-pointer hidden md:block text-sm dark:text-zinc-400">
+                      @{post?.user?.username}
+                    </span>
+                  </div>
+                  <div className="line-clamp-1">
+                    <span className="text-sm dark:text-zinc-500">
+                      {createdAt} ago
+                    </span>
+                  </div>
+                </div>
              </div>
  
-             <div className="mt-1 text-sm">{post?.body}</div>
+             <div className="mt-1 text-sm line-clamp-4">{post?.body}</div>
  
              <div className="flex flex-row items-center mt-3 gap-10">
                <div className="flex flex-row items-center text-neutral-500 gap-2 cursor-pointer transition hover:text-sky-500">
@@ -127,7 +134,9 @@
                  ) : (
                    <>
                      <AiOutlineHeart size={18} />
-                     <span className="">{Array.isArray(post?.likes) ? post.likes.length : ""}</span>
+                     <span className="">
+                       {Array.isArray(post?.likes) ? post.likes.length : ""}
+                     </span>
                    </>
                  )}
                </div>

@@ -2,14 +2,15 @@
  import { Button } from "@/components/ui/button";
  import React, { useCallback } from "react";
  import { FcGoogle } from "react-icons/fc";
- import ModeToggle from "../ui/modeToggle";
- import useRegisterModal from "@/hooks/useRegisterModal";
- import RegisterModal from "../modal/register-modal";
- import LoginModal from "../modal/login-modal"; 
- import useLoginModal from "@/hooks/useLoginModal";
- import { signIn } from "next-auth/react";
- import { FaGithub } from "react-icons/fa";
- import { FaXTwitter } from "react-icons/fa6";
+//  import ModeToggle from "../ui/modeToggle";
+import ModeToggle from "@/components/ui/modeToggle";
+import useRegisterModal from "@/hooks/useRegisterModal";
+import RegisterModal from "../modal/register-modal";
+import LoginModal from "../modal/login-modal"; 
+import useLoginModal from "@/hooks/useLoginModal";
+import { signIn } from "next-auth/react";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
  
  const Auth = () => {
    const registerModal = useRegisterModal();
