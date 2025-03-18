@@ -6,7 +6,7 @@ export interface IUser {
     profileImage: string;
     coverImage: string;
     updatedAt: Date;
-    _id: string;
+    id: string;
     bio: string;
     location: string;
     followers: string[];
@@ -15,14 +15,3 @@ export interface IUser {
     notifications: string[];
     isFollowing: boolean;
   }
-    
-    export interface IPost {
-      body: string;
-      comments: string;
-      createdAt: string;
-      likes: string;
-      updatedAt: string;
-      user: IUser;
-      _id: string;
-      hasLiked: boolean;
-    }
