@@ -1,6 +1,4 @@
-import { AwardIcon } from "lucide-react";
-import { NextResponse } from "next/server";
-import React from "react";
+
 import { hash } from "bcrypt";
 import prisma from "@/lib/prismadb";
  
