@@ -15,9 +15,7 @@ import ProfileTweets from "@/components/profile/profile-tweets";
     user_id: params.userId,
     type: "tweets",
   });
- 
- 
- 
+
    return (
      <>
       <ProfileHeader
