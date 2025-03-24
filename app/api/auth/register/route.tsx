@@ -17,13 +17,13 @@ import prisma from "@/lib/prismadb";
       });
 
        if (isExistingUser) {
-         return NextResponse.json(
+         return Response.json(
            { error: "email already exists" },
            { status: 400 }
          );
        }
  
-       return NextResponse.json({success:true});
+       return Response.json({success:true});
  
      } else if (step === "2") {
  
@@ -43,15 +43,15 @@ import prisma from "@/lib/prismadb";
         });
   
         if (!user) {
-          return NextResponse.json({ status: 500 });
+          return Response.json({ status: 500 });
         }
  
-        return NextResponse.json(user, { status: 200 });
+        return Response.json(user, { status: 200 });
      }
      return null;
  
    } catch (error) {
      const result = error as Error;
-     return NextResponse.json({ error: result.message }, { status: 400 });
+     return Response.json({ error: result.message }, { status: 400 });
    }
  }
