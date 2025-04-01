@@ -25,17 +25,18 @@ import EmojiPicker, {
     };
   
     return (
-      <div style={style} className={styles.container}>
-        <EmojiPicker
-          theme={Theme.AUTO}
-          onEmojiClick={onClick}
-          emojiStyle={EmojiStyle.TWITTER}
-          searchPlaceHolder="Search emojis"
-          width={`100%`}
-          height={`100%`}
-          suggestedEmojisMode={SuggestionMode.RECENT}
-        />
-      </div>
+      <></>
+      // <div style={style} className={styles.container}>
+      //   <EmojiPicker
+      //     theme={Theme.AUTO}
+      //     onEmojiClick={onClick}
+      //     emojiStyle={EmojiStyle.TWITTER}
+      //     searchPlaceHolder="Search emojis"
+      //     width={`100%`}
+      //     height={`100%`}
+      //     suggestedEmojisMode={SuggestionMode.RECENT}
+      //   />
+      // </div>
     );
   });
   
