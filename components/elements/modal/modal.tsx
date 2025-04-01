@@ -160,7 +160,7 @@
          e.stopPropagation();
        }}
        ref={modalRef}
-       className={`${styles.container}`}
+       className="z-50 fixed top-0 left-0 w-full h-full"
        style={backdropStyle}
        id="dialog"
        role="dialog"

@@ -1,7 +1,7 @@
 "use client";
  import { useSession } from "next-auth/react";
  import React, { useEffect, useState } from "react";
- import Auth from "../auth";
+ import Auth from "../auth_user"
  import Sidebar from "../sidebar/sidebar";
  import { Toaster } from "../ui/toaster";
  import NextTopLoader from "nextjs-toploader"; 
@@ -30,7 +30,7 @@
    return (
      <>
        {session && (
-         <div className="layout ">
+         <div className="layout max-w-[1265px]">
            <Sidebar />
  
            <main

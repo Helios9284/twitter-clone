@@ -9,8 +9,7 @@
  const Bookmarks = () => {
    const { data: session }: any = useSession();
  
-   const {
-     
+   const {    
      data: bookmarks,
      isLoading,
      isError,
@@ -18,7 +17,6 @@
      isFetchingNextPage,
      fetchNextPage,
      hasNextPage,
- 
    } = useTweets({
      queryKey: ["bookmarks", session?.currentUser?.id],
      type: "bookmarks",

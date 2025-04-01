@@ -1,7 +1,5 @@
 import React from "react";
- import styles from "./loading-screen.module.scss";
- import { FaXTwitter } from "react-icons/fa6";
- import { TwitterIcon } from "@/assets/twitter-icon";
+import { TwitterIcon } from "@/assets/twitter-icon";
  
  const LoadingScreen = () => {
    return (

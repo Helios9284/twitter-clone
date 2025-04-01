@@ -3,7 +3,7 @@ import React from "react";
 import { Logo } from "./logo";
 import Navbar from "../navbar/navbar";
 import TweetButton from "../create-tweet/tweet-button"; 
-import SessionUserButton from "../Auth/session-user-button";
+import SessionUserButton from "../auth_user/session-user-button";
  
  function Sidebar() {
    const { data: session } = useSession();
