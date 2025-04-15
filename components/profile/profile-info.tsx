@@ -10,7 +10,6 @@ import React, { useState } from "react";
  import { UserJoinDate } from "./user-join-date";
  import Link from "next/link";
  import EditProfileModal from "./edit-profile-modal";
-//  import styles from "./style/user-info.module.scss";
  import { MapPin } from "lucide-react";
  
  const ProfileInfo = ({ user, id }: { user: IUser; id: string }) => {
@@ -44,20 +43,14 @@ import React, { useState } from "react";
          </div>
  
          <div className="relative">
-           {/* <div className={styles.avatar}>
-             <button
-               className={styles.avatarButton}
-               aria-label="Inspect profile picture"
-               onClick={() => {}}
-             >
-               <Avatar className="border-4 border-white dark:border-black object-cover w-full h-full">
-                 <AvatarImage
-                   src={user?.profileImage || "/images/user_placeholder.png"}
-                 />
-                 <AvatarFallback className="text-7xl"></AvatarFallback>
-               </Avatar>
-             </button>
-           </div> */}
+            <div className="absolute left-4 w-[clamp(70px,20vw,146px)] h-[clamp(70px,20vw,146px)] transform -translate-y-1/2">
+                <Avatar className="border-4 border-white dark:border-black object-cover w-full h-full">
+                  <AvatarImage
+                    src={user?.profileImage || "/images/user_placeholder.png"}
+                  />
+                  <AvatarFallback className="text-7xl"></AvatarFallback>
+                </Avatar>
+            </div>
  
            <div className="flex justify-end p-4">
              {session?.currentUser?.id === user?.id ? (
