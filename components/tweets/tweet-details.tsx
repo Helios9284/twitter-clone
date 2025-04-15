@@ -8,7 +8,6 @@
  import CreateTweetWrapper from "../create-tweet/create-tweet-wrapper";
  import TweetCreationDate from "./tweet-creation-date";
  import Comments from "./comments";
- // import TweetMedia from "./tweet-media";
  import TweetMedia from "./tweet-media";
  import LoadingSpinner from "../elements/loading/loading-spinner";
  

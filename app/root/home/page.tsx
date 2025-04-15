@@ -3,7 +3,7 @@
  import CreateTweet from "@/components/create-tweet/create-tweet";
   
  import { Header } from "@/components/header/header";
- import { Tweets } from "@/components/tweets/tweets";
+ import {Tweets} from "@/components/tweets/tweets";
  
  const page = () => {
   //  const { data: session, status }: any = useSession();
