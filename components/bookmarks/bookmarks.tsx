@@ -1,4 +1,5 @@
-'use client'
+"use client"
+
  import { useSession } from "next-auth/react";
  import React from "react";
  import { useTweets } from "../tweets/hooks/use-tweets";
@@ -23,15 +24,15 @@
      id: session?.currentUser?.id,
    });
  
-   if(isLoading){
+   if (isLoading){
      return <LoadingSpinner/>
    }
  
    return (
-     <div>
+     <>
        {isSuccess && bookmarks?.pages[0]?.tweets?.length === 0 ? (
            <NoBookmarks/>
-       ):(
+       ) : (
          <InfiniteTweets 
            tweets={bookmarks}
            isFetchingNextPage={isFetchingNextPage}
@@ -40,7 +41,7 @@
            isSuccess={isSuccess}
          />
        )}
-     </div>
+     </>
    );
  };
  
